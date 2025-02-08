@@ -30,13 +30,12 @@ int rec(int l,int r){
 
 int main(){
     ios_base::sync_with_stdio(false);cin.tie(0);
-    int n;
+    int n,x;
     cin >> n;
-    vector<int> v(n);
     sum.resize(n+1);
     sum[0] = 0;
     for(int i=0;i<n;++i){ 
-        cin >> v[i]; 
-        sum[i+1]=sum[i]+((i%2)? -v[i]:v[i]);}
+        cin >> x; 
+        sum[i+1]=sum[i]+((i%2)? -x:-x);}
     cout << rec(1,n);
 }
